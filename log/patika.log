@@ -1,0 +1,106 @@
+2022-02-07 01:49:59.634  INFO 16952 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : Starting InnovaSpringRegisterLoginApplication using Java 11.0.12 on DESKTOP-RBOHCO1 with PID 16952 (C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin\target\classes started by uznza in C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin)
+2022-02-07 01:49:59.636  INFO 16952 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : No active profile set, falling back to default profiles: default
+2022-02-07 01:49:59.724  INFO 16952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-07 01:49:59.727  INFO 16952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-07 01:50:01.351  INFO 16952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 01:50:01.377  INFO 16952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-02-07 01:50:02.295  INFO 16952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-07 01:50:02.309  INFO 16952 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 01:50:02.310  INFO 16952 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 01:50:02.495  INFO 16952 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-07 01:50:02.496  INFO 16952 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2768 ms
+2022-02-07 01:50:02.754  WARN 16952 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-02-07 01:50:02.760  INFO 16952 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-07 01:50:02.795  INFO 16952 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-07 01:50:02.835 ERROR 16952 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2022-02-07 01:50:35.859  INFO 20496 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : Starting InnovaSpringRegisterLoginApplication using Java 11.0.12 on DESKTOP-RBOHCO1 with PID 20496 (C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin\target\classes started by uznza in C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin)
+2022-02-07 01:50:35.864  INFO 20496 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : No active profile set, falling back to default profiles: default
+2022-02-07 01:50:35.938  INFO 20496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-07 01:50:35.939  INFO 20496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-07 01:50:37.479  INFO 20496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 01:50:37.503  INFO 20496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2022-02-07 01:50:38.447  INFO 20496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-07 01:50:38.460  INFO 20496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 01:50:38.461  INFO 20496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 01:50:38.662  INFO 20496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-07 01:50:38.664  INFO 20496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2724 ms
+2022-02-07 01:50:38.934  WARN 20496 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-02-07 01:50:38.940  INFO 20496 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-07 01:50:38.974  INFO 20496 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-07 01:50:39.012 ERROR 20496 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2022-02-07 01:51:52.027  INFO 19860 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : Starting InnovaSpringRegisterLoginApplication using Java 11.0.12 on DESKTOP-RBOHCO1 with PID 19860 (C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin\target\classes started by uznza in C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin)
+2022-02-07 01:51:52.029  INFO 19860 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : No active profile set, falling back to default profiles: default
+2022-02-07 01:51:52.119  INFO 19860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-07 01:51:52.123  INFO 19860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-07 01:51:54.598  INFO 19860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-07 01:51:54.617  INFO 19860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 01:51:54.618  INFO 19860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 01:51:54.799  INFO 19860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-07 01:51:54.800  INFO 19860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2676 ms
+2022-02-07 01:51:55.478  WARN 19860 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-02-07 01:51:55.840  INFO 19860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-07 01:51:55.848  INFO 19860 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-02-07 01:51:55.912  INFO 19860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-07 01:51:55.939  INFO 19860 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : Started InnovaSpringRegisterLoginApplication in 4.967 seconds (JVM running for 8.807)
+2022-02-07 01:51:56.269  INFO 19860 --- [RMI TCP Connection(1)-192.168.1.106] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 01:51:56.270  INFO 19860 --- [RMI TCP Connection(1)-192.168.1.106] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-07 01:51:56.274  INFO 19860 --- [RMI TCP Connection(1)-192.168.1.106] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-07 01:53:34.865  INFO 17580 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : Starting InnovaSpringRegisterLoginApplication using Java 11.0.12 on DESKTOP-RBOHCO1 with PID 17580 (C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin\target\classes started by uznza in C:\Users\uznza\Desktop\javaspring-innova-bootcamp\InnovaSpringRegisterLogin)
+2022-02-07 01:53:34.868  INFO 17580 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : No active profile set, falling back to default profiles: default
+2022-02-07 01:53:34.972  INFO 17580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-07 01:53:34.982  INFO 17580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-07 01:53:37.116  INFO 17580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-07 01:53:37.130  INFO 17580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 01:53:37.130  INFO 17580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 01:53:37.254  INFO 17580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-07 01:53:37.255  INFO 17580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2271 ms
+2022-02-07 01:53:37.919  WARN 17580 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-02-07 01:53:38.214  INFO 17580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-07 01:53:38.222  INFO 17580 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-02-07 01:53:38.292  INFO 17580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-07 01:53:38.322  INFO 17580 --- [restartedMain] c.i.InnovaSpringRegisterLoginApplication : Started InnovaSpringRegisterLoginApplication in 4.358 seconds (JVM running for 6.812)
+2022-02-07 01:53:39.398  INFO 17580 --- [RMI TCP Connection(3)-192.168.1.106] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 01:53:39.400  INFO 17580 --- [RMI TCP Connection(3)-192.168.1.106] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-07 01:53:39.403  INFO 17580 --- [RMI TCP Connection(3)-192.168.1.106] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-07 01:54:14.548  WARN 17580 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-02-07 01:54:22.515  WARN 17580 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
