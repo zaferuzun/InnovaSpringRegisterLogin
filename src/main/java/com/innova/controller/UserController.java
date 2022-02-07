@@ -23,7 +23,8 @@ public class UserController {
     IUserRepository iUserRepository;
 
 
-    // http://localhost:8080/index/user
+    //login ve register için get sayfası
+    // http://localhost:8080/user
     @GetMapping()
     public String getLoginAndRegister(Model model){
         model.addAttribute("register_form", new RegisterDto());
@@ -31,7 +32,7 @@ public class UserController {
         return "user";
     }
 
-
+    // http://localhost:8080/user/register
     @PostMapping("register")
     public String postRegister(@Valid @ModelAttribute("register_form") RegisterDto registerDto, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
@@ -39,9 +40,7 @@ public class UserController {
             log.info(registerDto);
             return "user";
         }
-
-
-        //database yazılacak alan
+        //Dto olarak alınan veri maplenerek Entity'e eklendi
         UserEntity userEntity = UserEntity
                 .builder()
                 .userId(0L)
@@ -52,11 +51,11 @@ public class UserController {
 
         iUserRepository.save(userEntity);
 
-
         log.info(registerDto);
         return "user";
     }
 
+    // http://localhost:8080/user/login
     @PostMapping("login")
     public String postLogin(@Valid @ModelAttribute("login_form") LoginDto loginDto, BindingResult bindingResult){
 
