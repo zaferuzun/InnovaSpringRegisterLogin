@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Thymeleaf -2 </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container" class="container">
+		<!-- FORM SECTION -->
+		<div class="row">
+			<!-- SIGN UP -->
+			<div class="col align-items-center flex-col sign-up">
+				<div class="form-wrapper align-items-center">
+					<form class="form sign-up" autocomplete="off" th:method="post" th:action="@{/user/register}" th:object="${register_form}">
+
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input th:field="*{userName}" type="text" class="form-control" placeholder="User Name" autofocus>
+							<div th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></div>
+						</div>
+
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input th:field="*{userEmail}" type="text" class="form-control" placeholder="User Email" autofocus>
+							<div th:if="${#fields.hasErrors('userEmail')}" th:errors="*{userEmail}"></div>
+						</div>
+
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input th:field="*{userPassword}" type="password" class="form-control" placeholder="Password" autofocus>
+							<div th:if="${#fields.hasErrors('userPassword')}" th:errors="*{userPassword}"></div>
+						</div>
+
+						<input type="submit" class="btn btn-primary" value="Sign up">
+					</form>
+						<p>
+							<span>
+								Already have an account?
+							</span>
+							<b onclick="toggle()" class="pointer">
+								Sign in here
+							</b>
+						</p>
+					</div>
+				</div>
+			
+			</div>
+			<!-- END SIGN UP -->
+			<!-- SIGN IN -->
+			<div class="col align-items-center flex-col sign-in">
+				<div class="form-wrapper align-items-center">
+<!--					<form class="form sign-in" autocomplete="off" th:method="post" th:action="@{/user/login}" th:object="${login_form}">-->
+
+<!--						<div class="input-group">-->
+<!--							<i class='bx bxs-user'></i>-->
+<!--							<input autocomplete="false" th:field="*{userName}" type="text" class="form-control" placeholder="User Name" autofocus>-->
+<!--							<div th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></div>-->
+<!--						</div>-->
+
+<!--						<div class="input-group">-->
+<!--							<i class='bx bx-mail-send'></i>-->
+<!--							<input autocomplete="false" th:field="*{userPassword}" type="password" class="form-control" placeholder="Password" autofocus>-->
+<!--							<div th:if="${#fields.hasErrors('userPassword')}" th:errors="*{userPassword}"></div>-->
+<!--						</div>-->
+<!--						<input type="submit" class="btn btn-primary" value="Sign in">-->
+
+<!--					</form>-->
+<!--					-->
+					<div class="form sign-in">
+						<p>
+							<b>
+								Forgot password?
+							</b>
+						</p>
+						<p>
+							<span>
+								Don't have an account?
+							</span>
+							<b onclick="toggle()" class="pointer">
+								Sign up here
+							</b>
+						</p>
+					</div>
+				</div>
+				<div class="form-wrapper">
+		
+				</div>
+			</div>
+			<!-- END SIGN IN -->
+		</div>
+		<!-- END FORM SECTION -->
+		<!-- CONTENT SECTION -->
+		<div class="row content-row">
+			<!-- SIGN IN CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="text sign-in">
+					<h2>
+						Welcome
+					</h2>
+	
+				</div>
+				<div class="img sign-in">
+		
+				</div>
+			</div>
+			<!-- END SIGN IN CONTENT -->
+			<!-- SIGN UP CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="img sign-up">
+				
+				</div>
+				<div class="text sign-up">
+					<h2>
+						Join with us
+					</h2>
+	
+				</div>
+			</div>
+			<!-- END SIGN UP CONTENT -->
+		</div>
+		<!-- END CONTENT SECTION -->
+	</div>
+<!-- partial -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>

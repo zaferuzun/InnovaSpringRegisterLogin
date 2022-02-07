@@ -1,4 +1,9 @@
 package com.innova.repository;
 
-public interface IUserRepository {
+import com.innova.entity.UserEntity;
+import org.springframework.data.repository.CrudRepository;
+
+public interface IUserRepository extends CrudRepository<UserEntity,Long> {
+
+
 }

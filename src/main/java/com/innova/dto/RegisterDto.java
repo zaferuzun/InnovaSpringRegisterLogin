@@ -1,15 +1,24 @@
 package com.innova.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Log4j2
 public class RegisterDto {
 
     @NotEmpty(message = "Kullanıcı adı alanı boş geçilemez")
-    @Min(value = 5,message = "Kullanıcı adınız min 5 harften oluşmalıdır")
-    @Max(value = 20,message = "Kullanıcı adınız min 20 harften oluşmalıdır")
     private String userName;
     @NotEmpty(message = "Email alanı boş geçilemez")
     @Email(message = "Lütfen geçerli bir email giriniz")
