@@ -2,6 +2,7 @@ package com.innova.controller;
 
 import com.innova.dto.LoginDto;
 import com.innova.dto.RegisterDto;
+import com.innova.dto.UserDto;
 import com.innova.entity.UserEntity;
 import com.innova.repository.IUserRepository;
 import lombok.extern.log4j.Log4j2;
@@ -27,14 +28,15 @@ public class UserController {
     // http://localhost:8080/user
     @GetMapping()
     public String getLoginAndRegister(Model model){
-        model.addAttribute("register_form", new RegisterDto());
-        model.addAttribute("login_form", new LoginDto());
+        UserDto userDto = new UserDto();
+        model.addAttribute("register_form", userDto.getRegisterDto());
+        model.addAttribute("login_form", userDto.getRegisterDto());
         return "user";
     }
 
     // http://localhost:8080/user/register
     @PostMapping("register")
-    public String postRegister(@Valid @ModelAttribute("register_form") RegisterDto registerDto, BindingResult bindingResult){
+    public String postRegister(@Valid @ModelAttribute("register_form") RegisterDto registerDto, @ModelAttribute("login_form") LoginDto loginDto, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             log.error("Hata var");
             log.info(registerDto);
@@ -57,7 +59,7 @@ public class UserController {
 
     // http://localhost:8080/user/login
     @PostMapping("login")
-    public String postLogin(@Valid @ModelAttribute("login_form") LoginDto loginDto, BindingResult bindingResult){
+    public String postLogin(@Valid @ModelAttribute("login_form") LoginDto loginDto,@ModelAttribute("register_form") RegisterDto registerDto, BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){
             log.error("Hata var");
