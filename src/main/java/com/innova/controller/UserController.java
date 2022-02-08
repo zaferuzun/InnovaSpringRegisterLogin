@@ -24,12 +24,17 @@ public class UserController {
 
 
     //login ve register için get sayfası
-    // http://localhost:8080/user
-    @GetMapping()
-    public String getLoginAndRegister(Model model){
+    // http://localhost:8080/register
+    @GetMapping("register")
+    public String getRegister(Model model){
         model.addAttribute("register_form", new RegisterDto());
+        return "register";
+    }
+    // http://localhost:8080/login
+    @GetMapping("login")
+    public String getLogin(Model model){
         model.addAttribute("login_form", new LoginDto());
-        return "user";
+        return "login";
     }
 
     // http://localhost:8080/user/register
@@ -38,7 +43,7 @@ public class UserController {
         if(bindingResult.hasErrors()){
             log.error("Hata var");
             log.info(registerDto);
-            return "user";
+            return "register";
         }
         //Dto olarak alınan veri maplenerek Entity'e eklendi
         UserEntity userEntity = UserEntity
@@ -52,7 +57,7 @@ public class UserController {
         iUserRepository.save(userEntity);
 
         log.info(registerDto);
-        return "user";
+        return "register";
     }
 
     // http://localhost:8080/user/login
@@ -62,12 +67,12 @@ public class UserController {
         if(bindingResult.hasErrors()){
             log.error("Hata var");
             log.info(loginDto);
-            return "user";
+            return "login";
         }
 
         //databaseden kontrol edilecek alan
         log.info(loginDto);
-        return "login";
+        return "user";
     }
 
 }

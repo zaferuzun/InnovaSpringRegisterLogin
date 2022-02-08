@@ -16,6 +16,41 @@
 			<!-- SIGN UP -->
 			<div class="col align-items-center flex-col sign-up">
 				<div class="form-wrapper align-items-center">
+					<div class="form sign-up">
+					<form id="registerForm" autocomplete="off" th:method="post" th:action="@{/user/register}" th:object="${register_form}">
+
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input th:field="*{userName}" type="text" class="form-control" placeholder="User Name" autofocus>
+							<div th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></div>
+						</div>
+
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input th:field="*{userEmail}" type="text" class="form-control" placeholder="User Email" autofocus>
+							<div th:if="${#fields.hasErrors('userEmail')}" th:errors="*{userEmail}"></div>
+						</div>
+
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input th:field="*{userPassword}" type="password" class="form-control" placeholder="Password" autofocus>
+							<div th:if="${#fields.hasErrors('userPassword')}" th:errors="*{userPassword}"></div>
+						</div>
+
+<!--						<input type="submit" class="btn btn-primary" value="Sign up">-->
+						<button>
+							Sign up
+						</button>
+					</form>
+						<p>
+							<span>
+								Already have an account?
+							</span>
+							<b id="loginButton" onclick="forwardLogin();" class="pointer">
+								Sign in here
+							</b>
+						</p>
+				</div>
 			</div>
 			
 			</div>
@@ -23,40 +58,6 @@
 			<!-- SIGN IN -->
 			<div class="col align-items-center flex-col sign-in">
 				<div class="form-wrapper align-items-center">
-					<div class="form sign-in">
-
-					<form id="loginForm" autocomplete="off" th:method="post" th:action="@{/user/login}" th:object="${login_form}">
-
-						<div class="input-group">
-							<i class='bx bxs-user'></i>
-							<input autocomplete="false" th:field="*{userName}" type="text" class="form-control" placeholder="User Name" autofocus>
-							<div th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></div>
-						</div>
-
-						<div class="input-group">
-							<i class='bx bx-mail-send'></i>
-							<input autocomplete="false" th:field="*{userPassword}" type="password" class="form-control" placeholder="Password" autofocus>
-							<div th:if="${#fields.hasErrors('userPassword')}" th:errors="*{userPassword}"></div>
-						</div>
-<!--						<input type="submit" class="btn btn-primary" value="Sign in">-->
-						<button>
-							Sign in
-						</button>
-					</form>
-						<p>
-							<b>
-								Forgot password?
-							</b>
-						</p>
-						<p>
-							<span>
-								Don't have an account?
-							</span>
-							<b id="registerButton" onclick="forwardRegister();" class="pointer">
-								Sign up here
-							</b>
-						</p>
-					</div>
 				</div>
 				<div class="form-wrapper">
 		
@@ -103,10 +104,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script th:src="@{/js/script.js}"></script>
 <script>
-	function forwardRegister()
+	function forwardLogin()
 	{
-		window.location.href="/user/register";
+		window.location.href="/user/login";
 	}
 </script>
+
 </body>
 </html>
